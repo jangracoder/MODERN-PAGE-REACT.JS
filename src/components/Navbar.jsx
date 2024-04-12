@@ -46,7 +46,7 @@ function Navbar() {
                             </li>
                         ))}
                     </ul>
-                    <div className='hidden sm:flex items-center text-sm gap-8'>
+                <div className=' flex space-x-6'>
                 <a href="#" className='border-[1px] p-2 rounded-md'>Sign In</a>
                 <a href="#" className=' p-2 rounded-md bg-gradient-to-r from-orange-500 to-orange-800'>Create an Account</a>
             </div>

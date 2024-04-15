@@ -17,7 +17,7 @@ function FeatureSection() {
           </span>
         </h2>
       </div>
-      <div className="mt-10 flex flex-wrap border-b border-neutral-700/70">
+      <div className="mt-10 flex flex-wrap border-b  border-neutral-700/70 ">
         {features.map((feature,index)=>(
             <div key={index} className="mb-20">
                 <div className="flex  mx-6 ">

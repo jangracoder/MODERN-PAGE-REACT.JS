@@ -3,8 +3,9 @@ import logo from "../assets/logo.png";
 import { navItems } from "../constants";
 import { Menu, X } from "lucide-react";
 
-function Navbar() {
+function Navbar({handleLogoClick}) {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+
 
   const toggleMenu = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
@@ -13,11 +14,11 @@ function Navbar() {
   return (
     <nav className="top-0 z-50 sticky backdrop-blur-md  py-3 border-b border-neutral-700/70">
       <div className="container px-4 mx-auto flex justify-between items-center">
-        <div className="flex items-center gap-2 tracking-tight ">
-          <img className="h-10 w-10 " src={logo} alt="logo" />
+        <div className="flex items-center gap-2 tracking-tight " onClick={handleLogoClick}>
+          <img className="h-10 w-10 "  src={logo} alt="logo" />
           <span className="text-xl">VirtualR</span>
         </div>
-        <ul className="hidden lg:flex items-center gap-10  text-sm">
+        <ul className="hidden lg:flex items-center gap-12  text-sm">
           {navItems.map((item, index) => (
             <li key={index}>
               <a href={item.href}>{item.label}</a>

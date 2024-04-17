@@ -4,8 +4,8 @@ import { CheckCircle2 } from "lucide-react"
 function Prices() {
   return (
     <div className='mt-20'>
-        <h2 className='text-center text-3xl tracking-wide'>Pricing</h2>
-        <div className='flex flex-col flex-wrap mx-8 mt-10 '>
+        <h2 className='text-center text-3xl tracking-wide md:text-6xl'>Pricing</h2>
+        <div className='flex flex-col flex-wrap mx-8 mt-10 md:flex-row md:gap-7 md:mx-4'>
                {pricingOptions.map((prices,index)=>(
                 <div key={index} className="border-[1px] border-neutral-700/70 p-10 mb-5 rounded-xl">
                     <div className="flex flex-col gap-8 ">

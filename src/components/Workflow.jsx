@@ -5,15 +5,15 @@ import { checklistItems } from "../constants";
 function Workflow() {
   return (
     <div className="mt-20">
-      <h2 className="text-3xl text-center tracking-wide mx-5">
+      <h2 className="text-3xl text-center tracking-wide mx-5 md:text-6xl">
         Accelerate your{" "}
         <span className="bg-gradient-to-r from-orange-500 to-orange-800 bg-clip-text text-transparent">
           coding workflow.
         </span>
       </h2>
 
-      <div>
-        <img className="px-8 mt-2" src={code} alt="code image" />
+      <div className="md:flex">
+        <img className="px-8 mt-2 md:w-1/2" src={code} alt="code image" />
         <div className="mt-14 flex flex-wrap  ">
           {checklistItems.map((items, index) => (
             <div key={index} className="mb-12">

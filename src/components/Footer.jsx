@@ -4,7 +4,7 @@ import { resourcesLinks ,platformLinks ,communityLinks } from '../constants'
 function Footer() {
   return (
         <footer>
-            <div className='flex flex-wrap my-10 px-5 gap-4 md:justify-start md:gap-x-48 '>
+            <div className='flex flex-wrap my-10 px-5 gap-4 md:justify-start md:gap-x-48 lg:justify-evenly '>
                 <div className='mt-4 ' >
                     <h3 className='font-medium '>Resources</h3>
                     <div className='flex flex-col mt-5 '>

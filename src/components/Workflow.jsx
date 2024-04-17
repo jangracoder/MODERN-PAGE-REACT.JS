@@ -12,7 +12,7 @@ function Workflow() {
         </span>
       </h2>
 
-      <div className="md:flex">
+      <div className="md:flex  lg:px-20 ">
         <img className="px-8 mt-2 md:w-1/2" src={code} alt="code image" />
         <div className="mt-14 flex flex-wrap  ">
           {checklistItems.map((items, index) => (

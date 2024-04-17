@@ -5,7 +5,7 @@ import { features } from "../constants";
 
 function FeatureSection() {
   return (
-    <div className="mt-20">
+    <div className="mt-20 ">
       <div className="text-center ">
         <span className="text-orange-500 text-sm bg-neutral-900 rounded-full px-2 font-medium py-1">
           FEATURE
@@ -17,11 +17,11 @@ function FeatureSection() {
           </span>
         </h2>
       </div>
-      <div className="mt-10 flex flex-wrap border-b  border-neutral-700/70 md:mt-20 ">
+      <div className="mt-10 flex flex-wrap border-b  border-neutral-700/70 md:mt-20  ">
         {features.map((feature,index)=>(
-            <div key={index} className="mb-20 md:w-80 ">
-                <div className="flex  mx-6 md:mx-3 ">
-                    <div className="text-orange-700 mx-6 h-10 w-10 bg-neutral-900 rounded-full flex justify-center items-center p-2">
+            <div key={index} className="mb-20 md:w-80 lg:w-96 lg:ml-16">
+                <div className="flex  mx-6 md:mx-3 lg:mx-0 ">
+                    <div className="text-orange-700 mx-6 h-10 w-10 bg-neutral-900 rounded-full flex justify-center items-center p-2 ">
                         {feature.icon}
                     </div>
                     <div>

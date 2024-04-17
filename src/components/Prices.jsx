@@ -1,37 +1,48 @@
-import { pricingOptions } from "../constants"
-import { CheckCircle2 } from "lucide-react"
+import { CheckCircle2 } from "lucide-react";
+import { pricingOptions } from "../constants";
 
-function Prices() {
+const Pricing = () => {
   return (
-    <div className='mt-20'>
-        <h2 className='text-center text-3xl tracking-wide md:text-6xl'>Pricing</h2>
-        <div className='flex flex-col flex-wrap mx-8 mt-10 md:flex-row md:gap-7 md:mx-4'>
-               {pricingOptions.map((prices,index)=>(
-                <div key={index} className="border-[1px] border-neutral-700/70 p-10 mb-5 rounded-xl">
-                    <div className="flex flex-col gap-8 ">
-                        <h2 className="text-4xl"> {prices.title}
-                        {prices.title === "Pro" && (
+    <div className="mt-20">
+      <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center my-8 tracking-wide">
+        Pricing
+      </h2>
+      <div className="flex flex-wrap">
+        {pricingOptions.map((option, index) => (
+          <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-2">
+            <div className="p-10 border border-neutral-700 rounded-xl">
+              <p className="text-4xl mb-8">
+                {option.title}
+                {option.title === "Pro" && (
                   <span className="bg-gradient-to-r from-orange-500 to-red-400 text-transparent bg-clip-text text-xl mb-4 ml-2">
                     (Most Popular)
                   </span>
                 )}
-                </h2>
-                        <h2 className="text-5xl">{prices.price} <span className="text-base text-gray-400 -mx-1">/Month</span></h2>
-                        {prices.features.map((detail,index)=>(
-                            <div key={index} className="flex flex-col">
-                              <div className="flex">
-                                <CheckCircle2/>
-                                <span className="ml-2">{detail}</span>
-                              </div>
-                            </div>
-                        ))}
-                        <a href="#" className="text-center text-xl border border-red-900 rounded-lg py-2 mt-10">Subscribe</a>
-                    </div>
-                </div>
-               ))}
-        </div>
+              </p>
+              <p className="mb-8">
+                <span className="text-5xl mt-6 mr-2">{option.price}</span>
+                <span className="text-neutral-400 tracking-tight">/Month</span>
+              </p>
+              <ul>
+                {option.features.map((feature, index) => (
+                  <li key={index} className="mt-8 flex items-center">
+                    <CheckCircle2 />
+                    <span className="ml-2">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="#"
+                className="inline-flex justify-center items-center text-center w-full h-12 p-5 mt-20 tracking-tight text-xl hover:bg-orange-900 border border-orange-900 rounded-lg transition duration-200"
+              >
+                Subscribe
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Prices
+export default Pricing;
